@@ -1,7 +1,7 @@
 # BigIntegerLibrary
 This is a C++ library that provides addition and multiplication of arbitrarily large integers.
 For now, it only supports addition and multiplication, it is uncertain whether other arithmetic operations will be added.
-Multiplication works with a ```BigInt``` and an ```int``` multiplier.
+Multiplication works only with a ```BigInt``` and an ```int``` multiplier.
 Addition works only between BigInts.<br>
 
 The library has been compiled using MinGW 7.0.0(GCC 10.2.0). The provided makefile can be used for the compilation of the library. It is dynamically linked.<br>
