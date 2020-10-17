@@ -8,7 +8,7 @@ The library has been compiled using MinGW 7.0.0(GCC 10.2.0). The provided makefi
 Usage: ```g++ -o <output_name> <src_file> bigint.dll```
 
 Example:<br>
-```
+```c++
   #include <bigint.h>
   
   using std::cout;
