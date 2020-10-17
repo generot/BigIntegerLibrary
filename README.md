@@ -4,8 +4,8 @@ For now, it only supports addition and multiplication, it is uncertain whether o
 Multiplication works with a ```BigInt``` and an ```int``` multiplier.
 Addition works only between BigInts.<br>
 
-Example:
-<code>
+Example:<br>
+```
   #include <bigint.h>
   
   using std::cout;
@@ -24,4 +24,4 @@ Example:
     cout << resultSum.GetValue() << " " << resultMult.GetValue() << "\n";
     return EXIT_SUCCESS;
   }
-</code>
+```
