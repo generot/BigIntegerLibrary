@@ -38,11 +38,33 @@ BigInt BigInt::operator+ (BigInt ref) {
                 return BigInt(output);
 }
 
+bool BigInt::operator!= (BigInt to_compare) {
+	return num_rep != to_compare.num_rep;
+}
+
 BigInt BigInt::operator* (int multiplier) {
 	BigInt _this(num_rep), ret("0");
 
         while(multiplier--)
 		ret = ret + _this;
 
-                return ret;
+        return ret;
+}
+
+BigInt BigInt::operator* (BigInt multiplier) {
+	BigInt _this(num_rep), ret("0");
+
+	for(BigInt i = BigInt("0"); i != multiplier; i = i + BigInt("1"))
+		ret = ret + _this;
+
+	return ret;
+}
+
+BigInt BigInt::pow(BigInt power) {
+	BigInt _this(num_rep), ret("1");
+
+	for(BigInt i = BigInt("0"); i != power; i = i + BigInt("1"))
+		ret = ret * _this;
+
+	return ret;
 }
