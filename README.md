@@ -1,6 +1,6 @@
 # BigIntegerLibrary
 This is a C++ library that provides addition and multiplication of arbitrarily large integers.
-For now, it only supports addition, multiplication and Ðxponentiation, it is uncertain whether other arithmetic operations will be added.
+For now, it only supports addition, multiplication and exponentiation, it is uncertain whether other arithmetic operations will be added.
 Multiplication works with a ```BigInt``` multiplier, as well as an ```int``` multiplier.
 Addition and exponentiation work only between BigInts.<br>
 
