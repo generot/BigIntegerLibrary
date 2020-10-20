@@ -5,7 +5,9 @@ Multiplication works with a ```BigInt``` multiplier, as well as an ```int``` mul
 Addition and exponentiation work only between BigInts.<br>
 
 The library has been compiled using MinGW 7.0.0(GCC 10.2.0). The provided makefile can be used for the compilation of the library. It is dynamically linked.<br>
-Usage: ```g++ -o <output_name> <src_file> bigint.dll```
+Usage: <br>
+C++: ```g++ -o <output_name> <src_file> bigint.dll```<br>
+C: ```gcc -o <output_name> <src_file> cbigint.dll```
 
 Example:<br>
 ```c++
