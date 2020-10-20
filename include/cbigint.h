@@ -2,13 +2,16 @@
 #define __C_BIG_INT__
 
 typedef void *CBigInt;
+#define INCREMENT make_bigint("1")
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void make_bigint(CBigInt*, const char*);
-void delete_bigint(CBigInt*);
+CBigInt make_bigint(const char*);
+
+void assign_bint(CBigInt*, CBigInt);
+void delete_bigints(size_t, ...);
 
 int not_equal(CBigInt, CBigInt);
 
