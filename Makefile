@@ -5,12 +5,14 @@ INCLUDE = include//bigint.h include//cbigint.h
 BIN = bin//
 SRC = src//
 
-all: $(BIN)cbigint.dll $(BIN)bigint.dll
+EXT = dll
 
-$(BIN)cbigint.dll: cbind.o $(BIN)bigint.dll
-	$(CC) -shared $(CFLAGS) -o $@ $< $(BIN)bigint.dll
+all: $(BIN)cbigint.$(EXT) $(BIN)bigint.$(EXT)
 
-$(BIN)bigint.dll: bigint.o
+$(BIN)cbigint.$(EXT): cbind.o $(BIN)bigint.$(EXT)
+	$(CC) -shared $(CFLAGS) -o $@ $< $(BIN)bigint.$(EXT)
+
+$(BIN)bigint.$(EXT): bigint.o
 	$(CC) -shared $(CFLAGS) -o $@ $<
 
 %.o: $(SRC)%.cc $(INCLUDE)
